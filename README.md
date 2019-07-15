@@ -5,4 +5,5 @@
 # Brutal way
 1. install node.js
 2. npm install express -g
-3. node api-mock.js
+3. npm install body-parser -g
+4. node api-mock.js

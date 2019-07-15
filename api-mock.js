@@ -1,22 +1,23 @@
 var express = require('express'), //npm install express -g
   app = express(),
   port = 3003;
-let router = require('express').Router();
+var bodyParser = require('body-parser'); //npm install body-parser -g
+var router = require('express').Router();
 
 app.use(bodyParser.json() );
 app.use(bodyParser.urlencoded({
   extended: false
 })); 
 
-let apiRoutes = router.post('/test', function (req, res) {
+router.post('/test', function (req, res) {
     console.log('REQUEST:', req.body);
     res.json({"REQUEST": req.body});
 });
 
-let apiRoutes = router.get('/test', function (req, res) {
+router.get('/test', function (req, res) {
     console.log('REQUEST:', req.body);
     res.json({"REQUEST": req.body});
 });
 
-app.use('/', apiRoutes)
+app.use('/', router)
 app.listen(port);
