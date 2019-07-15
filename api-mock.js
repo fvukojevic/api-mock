@@ -9,14 +9,9 @@ app.use(bodyParser.urlencoded({
   extended: false
 })); 
 
-router.post('/test', function (req, res) {
-    console.log('REQUEST:', req.body);
-    res.json({"REQUEST": req.body});
-});
-
-router.get('/test', function (req, res) {
-    console.log('REQUEST:', req.body);
-    res.json({"REQUEST": req.body});
+router.all('/test', function (req, res) {
+    console.log('METHOD: ', req.method, '\r\nREQUEST:\r\n', req.body, '\r\n----------------------');
+    res.json({'TYPE': req.method, 'REQUEST': req.body});
 });
 
 app.use('/', router)
