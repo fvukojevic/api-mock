@@ -1,0 +1,18 @@
+{
+  "name": "api-mock",
+  "version": "1.0.0",
+  "description": "generates a local API for testing calls",
+  "license": "internal use only",
+  "author": "David-Samuel Startz / userwerk GmbH",
+  "main": "api-mock.js",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.admin.userwerk.com/uw/api-mock"
+  },
+  "scripts": {
+    "start": "node api-mock.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
