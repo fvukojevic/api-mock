@@ -1,11 +1,13 @@
 # Requirements
-node.js (https://nodejs.org/en/)
+1. node.js (https://nodejs.org/en/)
+2. git clone ssh://git@gitlab.admin.userwerk.com:2222/uw/api-mock.git
+3. cd api-mock
 
 # Easy way
-1. npm install
-2. npm start
+4. npm install
+5. npm start
 
 # Brutal way
-1. npm install express -g
-2. npm install body-parser -g
-3. node api-mock.js
+4. npm install express -g
+5. npm install body-parser -g
+6. node api-mock.js
